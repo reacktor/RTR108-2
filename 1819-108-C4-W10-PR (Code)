@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Functions}
+\author{Maksims.Oļševskis}
+\date{April 2019}
+
+\begin{document}
+
+\maketitle
+
+
+    \documentclass{article}
+    \usepackage[utf8]{inputenc}
+    \usepackage{tikz-cd}
+    \usepackage{libertine}
+    \usepackage{ragged2e}
+    \usepackage{graphicx}
+    \usepackage{tabto}
+
+    \usepackage[english]{babel}
+
+    \title{1819-108-C4-W10-PR}
+    \author{Max}
+    \date{April 2019}
+
+    \begin{document}
+
+    \maketitle
+
+    \section{Introduction}
+    \newpage
+    \begin{right}
+    \boldsymbol{$\cdot$}The sigmoid function(or logistic)
+    \end{right}
+
+    \begin{center}
+    $\phi(x)=\frac{1}{1+exp(-x)}$.
+    \end{center}
+
+    \begin{right}
+    \boldsymbol{$\cdot$}The hyperbolic tangent function("tanh")
+    \end{right}
+
+    \begin{center}
+    $\phi(x)=\frac{exp(x)-exp(-x)}{exp(x)+exp(-x)}=\frac{exp(2x)-1}{exp(2x)+1}$.
+    \end{center}
+
+    \begin{right}
+    \boldsymbol{$\cdot$}The hard threshold function
+    \end{right}
+
+    \begin{center}
+    $\phi _{\beta} (x)=1 _{x\geq \beta }$.
+    \end{center}
+
+    \begin{right}
+    \boldsymbol{$\cdot$}The Rectified Linear Unit(ReLU) activation function
+    \end{right}
+
+    \begin{center}
+    $\phi(x)= max(0,x)$.
+    \end{center}
+
+    \end{document}
+
+
+
+\end{document}
