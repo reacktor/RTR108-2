@@ -1,0 +1,157 @@
+\documentclass{article}
+ %%% use \documentstyle for old LaTeX compilers
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} %%% 'french', 'german', 'spanish', 'danish', etc.
+\usepackage[document]{ragged2e}
+\usepackage{changepage}
+\usepackage[dvips]{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{mathdots}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+
+\usepackage[classicReIm]{kpfonts}
+ %%% use 'pdftex' instead of 'dvips' for PDF output
+ \documentclass{article}
+%%% use \documentstyle for old LaTeX compilers
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} %%% 'french', 'german', 'spanish', 'danish', etc.
+\usepackage[document]{ragged2e}
+\usepackage{changepage}
+\usepackage[dvips]{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{mathdots}
+\usepackage{tikz}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=0.25cm]{geometry}
+
+\usepackage[classicReIm]{kpfonts}
+
+\definecolor{myblue}{RGB}{91,155,213}
+
+\newcommand{\cbox}[2][yellow]{%
+  \colorbox{#1}{\parbox{\dimexpr\linewidth-2\fboxsep}{\strut #2\strut}}%
+}
+
+
+\begin{document}
+\begin{justify}
+\begin{adjustwidth}{2.5cm}{1.3cm}
+called \textbf{maximum-flow problems}.Several specialized algorithms exist to solve maximum-flow problems.In this section,we begin by showing how linear programming can be used
+\newline to solve maximum-flow problem.Then we discuss the Ford-Fulkerson (1962) method 
+\newline for solving maximum-flow problems.
+\end{adjustwidth}
+\end{justify}
+\noindent \textbf{}
+
+\noindent \textbf{}
+\begin{justify}
+\begin{adjustwidth}{2.5cm}{1.3cm}
+\Large \noindent \textcolor{Blue}{{LP SOLUTION of Maximum-Flow Problems}}
+\end{adjustwidth}
+\end{justify}
+
+\noindent \textbf{}
+\noindent \textbf{ \colorbox{black}{\textcolor{white}{{EXAMPLE 3}}}\colorbox{blue}{\textcolor{white}{Maximum Flow\quad\quad \quad\quad\quad\quad\quad\quad \quad\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad\quad \quad \quad\quad \quad \quad\quad\quad\quad\quad\quad \quad\quad\quad\quad\quad}}}
+\noindent \textbf{}
+\begin{justify}
+\begin{adjustwidth}{2.5cm}{1.3cm}
+Sunco Oil wants to ship the maximum possible amount of oil(per hour)via pipeline from\newline node \slshape{so} \upshape to node \slshape{si} \upshape in Figure 6. On its way from node \slshape{so} \upshape to node \slshape{si}\upshape, oil must pass through \newline some or all of stations 1, 2 and 3. The various arcs represent pipelines of different di-\newline ameters. The maximum number of oil (millions of barrels per hour) than can be\newline pumped through each arc is shown in Table 8. Each number is called an \textbf{arc capacity.}\newline Formulate an LP that can be used to determine the maximum number of barrels of oil per\newline hour that can sent from \slshape{so} \upshape to node \slshape{si}\upshape.
+\end{adjustwidth}
+\end{justify}
+
+\noindent 
+\textcolor{blue}{\textbf{Solution} $\cdot$ }
+\begin{adjustwidth}{2.5cm}{1.3cm}
+\begin{justify}
+Node \slshape{so} \upshape is called the \slshape{source} \upshape node because oil flows out of it but no oil flows into it. Anal-\newline ogously, node \slshape{si} \upshape is called the \slshape{sink} \upshape node because oil flows into it and no oil flows out of \newline it. For reasons that will soon become clear, we have added an artificial arc a_0 \textnormal  {from the} \newline \textnormal {sink to source. The flow through a_0} \textnormal {is not actually oil, hence the term \textbf{arc capacity}}.
+\begin{justify}
+\begin{adjustwidth}{0.3 cm}{1.3cm}
+\newline \upshape To formulate an LP that will yield the maximum flow form node so  to si,we observe 
+\newline that Sunco must determine how much oil (per hour) should be sent through arc (i,j).Thus,
+\newline  we define
+\end{adjustwidth}
+\end{justify}
+\end{justify}
+\end{adjustwidth}
+\noindent 
+\begin{adjustwidth}{2.5cm}{1.3cm}
+\begin{justify}
+x_i_j \textnormal {= millions of barrels of oil per hour that will pass through arc (i,j) of pipeline}
+\begin{adjustwidth}{2.5cm}{1.3cm}
+\begin{justify}
+\newline \textnormal {As an examle of possible flow (termed a \slshape feasible flow \upshape ,consider the flow indentified} \newline \textnormal {by the numbers in parentheses in Figure 6.}
+\end{justify}
+\end{adjustwidth}
+\end{justify}
+\end{adjustwidth}
+\noindent \textbf{}
+\begin{adjustwidth}{2.5cm}{1.3cm}
+\begin{justify}
+x_{so,1}= 2, \qquad   x_{13}= 0,\qquad x_{12}=2,\qquad x_{3,si}= 2,\qquad x_{si,so}=2,\qquad x_{so,2}= 0
+\end{justify}
+\end{adjustwidth}
+
+\quad\quad\quad\quad \noindent \textcolor{myblue}{\textbf{FIGURE 6}}
+
+\noindent \textbf{Network for Sunco Oil}
+
+
+\begin{tikzpicture}
+
+\draw[ thick,-|>] (0,0) -- node[above]{(2)2} (1.6,0);
+\draw[ thick,-|>] (2,0) -- node[above]{(2)3} (3.6,0);
+\draw[ thick,-|>] (4,0) -- node[above]{(2)2}(5.6,0);
+\draw[ thick,-|>] (2.2,0) .. node[above]{(0)4} controls (2.85,1.5) ..(3.6,1.9);
+\draw[ thick,-|>] (4,2) .. node[above]{(0)1} controls (5,1.5) .. (5.8,0.3);
+\draw[ thick,-|>] (0,0) .. node[above]{\quad\quad\quad\quad(0)3} controls (2,-0.8) .. (3.7,-0.2);
+\draw[ thick,-|>] (6,0) .. node[above]{a$_{0}$(2)} controls (3,-1.5) .. (0.3,-0.3);
+\filldraw[fill=Gray!40!white, ](0,0) circle(0.4cm) node{so} ;
+\filldraw[fill=Gray!40!white, ](2,0) circle(0.4cm) node{1} ;
+\filldraw[fill=Gray!40!white, ](4,0) circle (0.4cm) node{2};
+\filldraw[fill=Gray!40!white, ](4,2) circle (0.4cm) node{3};
+\filldraw[fill=Gray!40!white, ](6,0) circle (0.4cm) node{si};
+\end{tikzpicture}
+
+
+
+\noindent 
+
+\noindent 
+
+
+\noindent \textbf{}
+
+\quad\quad\quad\quad\noindent\textcolor{blue}{\textbf{{Table 8  }}}
+
+\noindent \textbf{Arc Capacities for Sunco Oil}
+\noindent \textbf{}
+\begin{tabular}{c c}
+\hline
+\quad\textcolor{blue}{Arc & \textcolor{blue}{Capacity}}
+
+\hline
+\quad. & . \\
+(so,1) & 2 \\
+(so,2) & 3 \\
+(1,2) &  3\\
+(1,3) & 4 \\
+(3,si) & 1 \\
+(2,si) &  2\\
+\hline
+
+\end{tabular}
+
+\noindent \textbf{}
+\noindent \textbf{}
+\noindent \textbf{}
+\noindent \textbf{}
+
+
+\noindent \textcolor{myblue}{\textbf{420}}\quad\quad\quad\quad\quad\quad\quad\quad CHAPTER \textbf{8 Network Models}
+
+\end{document}
