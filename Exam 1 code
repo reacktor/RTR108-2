@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{libertine}
+\usepackage{ragged2e}
+\usepackage[english]{babel}
+\usepackage{tabto}
+\setlength{\parindent}{4em}
+\title{Prototips}
+\author{Maksims Oļševskis}
+\date{April 03 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\newpage
+\begin{center}
+\title{\textit{Statistical Information Theory}}
+\end{center}
+
+\begin{justify}
+ the binary system of encoding messages with only two symbols, typically "0" and "1",  is used, a message is encoded as a string of binary digits.The most elementary choice one can make is between two items: "0" and "1", "heads" or "tails", "true" or "false". etc. Shannon defined the bit as such an elementary choice, or unit of information content, from which all selection operations are built. In one more interpretation, bit, or binary digit,and is equivalent to the choice between two equally likely alternatives. For instance. if we know that a coin is to be tossed. but are unable to see it as it falls, a message telling whether the coin came up heads or tails gives us one bit of information.
+ 
+  The quantity of information in a message entirely depends on the symbolic language used and the length of the text, and not at all on the meaning of this message. For instance. the words "information" and "abdaracabra" written in the Roman alphabet with 26 symbols are one 26''$(=3,670,344,486,987,776 \approx 3.7x10^1^5)$ 
+ possible formal words of size 11. Therefore, both 
+ contain the same information quantity (assuming 
+ that each symbol has the same likelihood), even 
+ though the first has an English meaning and the 
+ second does not.
+ 
+  The term \textit{bit} was first published by Shannon in his main 1948 paper. He attributed its origin to John Wilder Tukey (1915—2000) who contracted the expression \textit{binary digit} to one word bit. However. Vannevar Bush (1890—1974) had written in 1936 of \textit{bits of information} that could be stored on the punch cards in the mechanical devices of that time.
+Formula (3.2.4) reflects uncertainty we have with respect to the situation when we know only probabilities but not the actual result (event), and the measure of this uncertainty is also the measure of information that eliminates this uncernainty. In this formula, entropy and later. information are defined as quantities that depend on symbol manipulation alone
+
+For instance, suppose we have a device \textit{M} that can produce one of three symbols. \textit{A, B}. or \textit{C} on each step. As we wait for the next symbol to appear, we are \textit{uncertain} as to which symbol \textit{M} will produce. Once a symbol appears and we recognize it, our uncertainty \textit{decreases}, and we assume that we have received some \textit{information}. That is, information is a decrease in our uncertainty. The rilöre Symbols can \textit{M} produce the higher 
+ \end{justify}
+
+ 
+
+\end{document}
